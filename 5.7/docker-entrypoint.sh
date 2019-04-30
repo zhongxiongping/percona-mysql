@@ -2,7 +2,7 @@
 # do something before mysql start
 [ $DEBUG ] && set -x
 # create server_id
-server_id=${HOSTNAME#*-}
+server_id=test
 MYSQLC_MYSQLD_SERVER_ID=`expr $server_id + ${STEP_NUM:-0}`
 export MYSQLC_MYSQLD_SERVER_ID
 
